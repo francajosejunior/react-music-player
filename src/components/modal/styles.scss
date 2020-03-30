@@ -1,0 +1,67 @@
+@import '../../styles/scss/main';
+
+$heightTitleModal: 35px;
+
+.default-modal {
+  @include flexbox();
+  @include flex-column();
+  position: relative;
+  background-color: #fff;
+  width: 600px;
+  button {
+    cursor: pointer;
+  }
+  .sub-title {
+    @include flexbox();
+    @include justify-content(flex-start);
+    @include align-items(center);
+    height: $heightTitleModal;
+    padding-left: $marginDefault;
+    font-weight: bold;
+  }
+
+  .icon-close {
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+
+    width: $heightTitleModal;
+    height: $heightTitleModal;
+
+    border-left: solid rgb(204, 204, 204) 1px;
+
+    &:hover {
+      i {
+        color: #a1260d;
+      }
+    }
+  }
+
+  .content {
+    @include flexbox();
+    @include flex-column();
+    @include flex(1);
+    margin: calc(2 * #{$marginDefault});
+  }
+  .content-loader {
+    @include flex_centralized();
+  }
+}
+.default-modal-overlay {
+  @include flexbox();
+  @include align-items(center);
+  @include justify-content(center);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 101;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(30, 30, 30, 0.7);
+}

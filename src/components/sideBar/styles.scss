@@ -1,0 +1,124 @@
+@import './../../styles/scss/main';
+
+// preloader for icons
+.lds-ripple div {
+  // border: 4px solid #5c5c5c;
+  opacity: 0.2;
+  height: 40px;
+  width: 42px;
+  padding: 2px;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+
+.menu-sidebar {
+  color: #9f9f9f;
+  background: $principal;
+  overflow: hidden;
+  margin-top: 5px; // oculta scroll do menu
+  @include flexbox();
+  @include flex-direction(column);
+  @include align-items(center);
+  @include justify-content(flex-start);
+  &.open {
+    width: $sidebarWidth;
+  }
+  &.close {
+    width: 42px;
+
+    &.mobile {
+      left: -$sidebarWidth;
+    }
+  }
+  .menu-list {
+    width: 100%;
+    .menu-item-container {
+      @include flexbox();
+      @include flex-direction();
+      cursor: pointer;
+      &.active {
+        background-color: $principalHover;
+      }
+      .menu-item {
+        width: 100%;
+        &.active {
+          color: #ffffff !important;
+        }
+      }
+      &:hover {
+        background: $principalHover;
+      }
+
+      a {
+        padding: 0;
+        width: 100%;
+        text-decoration: none;
+        text-transform: capitalize;
+        @include flexbox();
+        @include flex-direction();
+        cursor: pointer;
+      }
+      i {
+        margin: 8px;
+      }
+      .menu-item-label {
+        @include flex-direction();
+        @include align-items(center);
+        @include justify-content(space-between);
+        height: 40px;
+        color: $branco;
+        font-size: $fontSizeMenu;
+        padding: 12px;
+        background-color: #4e4e4e;
+        border-bottom: 1px solid #5a5959;
+        border-left: 1px solid #5a5959;
+        color: #9f9f9f;
+        width: 100%;
+        i {
+          margin: 0px;
+        }
+        .arrow {
+          transition: transform ease-in-out 0.3s;
+          opacity: 0.6;
+          &.active {
+            transform: rotate(180deg);
+          }
+        }
+        &:hover {
+          background: $principalHover;
+        }
+
+        &.active {
+          color: #ffffff !important;
+          background-color: $principalHover;
+        }
+        &.close {
+          display: none;
+        }
+      }
+      .sub-menu {
+        background-color: #5c5c5c;
+        font-size: $fontSizeMenu;
+        a {
+          border-bottom: 1px solid #4e4e4e;
+          border-left: 1px solid #5a5959;
+          color: #9f9f9f;
+          &:hover {
+            background: #424242;
+          }
+        }
+        .sub-menu-item {
+          font-size: $fontSizeMenu;
+          padding: 12px;
+        }
+      }
+    }
+  }
+
+  @include transition(
+    left ease-in-out $timeTransitionMenu,
+    width ease-in-out $timeTransitionMenu
+  );
+}

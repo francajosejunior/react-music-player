@@ -1,0 +1,28 @@
+@import './../../styles/scss/main';
+
+.sub-title {
+  // background-color: red;
+  padding: 5px 0 5px 0;
+  color: $colorBaseOne;
+  font-size: 1rem;
+  border-bottom: 1px solid $colorBaseTwo-med;
+  margin-bottom: 2px;
+  @include user-select(none);
+  font-weight: normal;
+  text-transform: capitalize;
+  position: relative;
+
+  .bottons {
+    position: absolute;
+    top: 13px;
+    right: 5px;
+    img {
+      cursor: pointer;
+    }
+  }
+
+  &.modal {
+    padding: 20px 40px 20px 20px;
+    font-size: 1rem;
+  }
+}

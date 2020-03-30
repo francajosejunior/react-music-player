@@ -1,0 +1,238 @@
+@import "./scss/main.scss";
+@import "./lib/bootstrap-grid.scss";
+@import "./lib/reset.scss";
+@import "./lib/material-icon.scss";
+@import "./scss/mixins";
+
+html,
+body,
+#root,
+.app-container {
+  @include flexbox();
+  width: 100% !important;
+  height: 100% !important;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #f1f1f1;
+}
+
+::-webkit-scrollbar {
+  appearance: none;
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  border-radius: 10px;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.col30 {
+  @include colWidth(30);
+}
+.col50 {
+  @include colWidth(50);
+}
+.col100 {
+  @include colWidth(100);
+}
+.col130 {
+  @include colWidth(130);
+}
+.col200 {
+  @include colWidth(200);
+}
+.col250 {
+  @include colWidth(250);
+}
+
+.entrada-mascara-monetario {
+  text-align: right !important;
+}
+
+.ReactSelectRow__control {
+  @include flex-direction();
+  min-height: 35px !important;
+  height: 35px !important;
+  * {
+    @include flex-direction();
+  }
+  ::-webkit-scrollbar {
+    appearance: none;
+    width: 1px;
+    height: 1px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: white;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    height: 1px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    border-radius: 10px;
+  }
+  .ReactSelectRow__value-container {
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    &.ReactSelectRow__value-container--is-multi {
+      width: 100%;
+      &.ReactSelectRow__value-container--has-value {
+        height: 27px;
+      }
+    }
+  }
+  .ReactSelectRow__placeholder {
+    @include opacity(0.6);
+    font-size: 0.9rem;
+  }
+  // .ReactSelectRow__single-value {
+  //   margin-top: 5px !important;
+  // }
+}
+
+.pending {
+  .ReactSelectRow__control {
+    @include flex-direction();
+
+    * {
+      @include flex-direction();
+    }
+    @extend %pre-loader;
+    .ReactSelectRow__placeholder {
+      color: #999;
+    }
+  }
+}
+
+.componente-carregando {
+  @extend %pre-loader;
+}
+
+// DATE PICKER
+.react-datepicker-wrapper {
+  @extend %width-100;
+  .react-datepicker__input-container {
+    @extend %width-100;
+  }
+}
+
+.react-datepicker-popper {
+  z-index: 9999 !important;
+}
+
+.react-datepicker__input-container {
+  .react-datepicker__close-icon {
+    &::after {
+      font-size: 16px !important;
+      height: 10px !important;
+      width: 10px !important;
+      top: 8px !important;
+      padding: 2px !important;
+      transition: all 0.1s;
+    }
+    &:hover {
+      &::after {
+        color: rgb(153, 153, 153);
+        transform: scale(1.4);
+        top: 6px !important;
+      }
+    }
+    &::after {
+      background-color: rgba(0, 0, 0, 0);
+      border-radius: 0px;
+      bottom: 0;
+      box-sizing: border-box;
+      content: "\D7";
+      cursor: pointer;
+      font-size: 26px;
+      height: 16px;
+      width: 16px;
+      line-height: 1;
+      // margin: -8px auto 0;
+      padding: 2px;
+      position: absolute;
+      text-align: center;
+      color: rgb(204, 204, 204);
+      right: 8px;
+      top: 0px;
+    }
+  }
+}
+
+// Botoes
+button {
+  &.formulario {
+    float: right;
+  }
+  &.menor {
+    min-width: 130px;
+  }
+}
+
+// Botoes
+
+// Texto
+
+%conteudo {
+  padding: 10px 0;
+  font-size: 0.9rem;
+  color: #999;
+}
+.cor-texto {
+  @extend %conteudo;
+}
+.valor-positivo {
+  color: $valor-positivo;
+}
+.valor-negativo {
+  color: $valor-negativo;
+}
+// Texto
+input.number,
+input[type="number"] {
+  text-align: right !important;
+  -moz-appearance: textfield;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+}
+
+// Notification
+.notification-warning {
+  opacity: 1 !important;
+  background-color: #ffbd14 !important;
+}
+.notification-warning:hover {
+  background-color: #fdb913 !important;
+}
+
+.modal-log-textarea {
+  min-height: 150px !important;
+}
+
+// ReactTable
+.ReactTable .rt-thead .rt-tr {
+  text-align: left !important;
+}

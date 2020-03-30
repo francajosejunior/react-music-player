@@ -1,0 +1,14 @@
+node_modules/
+dist/
+dist.zip
+.vscode/
+__snapshots__/
+junit.xml
+
+src/payload.json
+payload.json
+payload.jsonc
+rest.http
+todo.js
+src/todo.js
+debug.log

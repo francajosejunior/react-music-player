@@ -1,0 +1,50 @@
+@import './../../styles/scss/main';
+
+.input-box {
+  margin-top: 5%;
+  &.user {
+    position: relative;
+    width: 100%;
+    background-color: #2f2f2f;
+    border: 1px solid #222222;
+    border-radius: 2px;
+    height: 40px;
+    line-height: 40px;
+    @media (max-width: 1500px) {
+      height: 30px;
+      line-height: 30px;
+    }
+  }
+  .login-identity-img {
+    position: absolute;
+    margin: 4px;
+    width: 8%;
+
+    @include opacity(0.6);
+    &.done {
+      margin-left: 87%;
+      width: 8.5%;
+    }
+  }
+  input {
+    color: $colorBaseTwo-med;
+    @include opacity(0.8);
+    font-size: 0.9rem;
+    height: 38px;
+    @media (max-width: 1500px) {
+      height: 28px;
+      line-height: 30px;
+    }
+    background-color: #2f2f2f;
+    border: none;
+    margin-left: 15%;
+    width: 70%;
+    &::placeholder {
+      @include opacity(0.6);
+      font-size: 0.9rem;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}

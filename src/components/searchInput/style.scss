@@ -1,0 +1,73 @@
+@import './../../styles/scss/main';
+
+%input {
+  max-height: 30px;
+  height: 30px;
+  min-height: 30px;
+  color: $colorBaseTwo;
+  width: 100%;
+  margin: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: none;
+  &::placeholder {
+    @include opacity(0.6);
+    font-size: 0.9rem;
+  }
+  &::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    @include opacity(0.6);
+    font-size: 0.9rem;
+  }
+  &::-moz-placeholder {
+    /* Firefox 19+ */
+    @include opacity(0.6);
+    font-size: 0.9rem;
+  }
+  &:-ms-input-placeholder {
+    /* IE 10+ */
+    @include opacity(0.6);
+    font-size: 0.9rem;
+  }
+  &:-moz-placeholder {
+    /* Firefox 18- */
+    @include opacity(0.6);
+    font-size: 0.9rem;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.search-input {
+  position: relative;
+  width: 100%;
+  max-height: 35px;
+  height: 35px;
+  min-height: 35px;
+  &.label-line {
+    @include flex_centralized();
+  }
+  .debounce-input {
+    border: 1px solid $colorInputBorder;
+    border-radius: 4px;
+    width: 100%;
+    @include flex_centralized();
+  }
+  // &.error {
+  //   border: 1px solid red !important;
+  //   border-radius: 4px;
+  //   outline: lightness($color: red);
+  // }
+  input {
+    @extend %input;
+  }
+  .search-input-icon {
+    position: relative;
+    top: 2px;
+    right: 4px;
+    margin-left: 4px;
+    color: $colorInputBorder;
+    @include opacity(0.4);
+  }
+}

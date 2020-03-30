@@ -1,0 +1,142 @@
+@import '../../styles/scss/main';
+
+.header-component {
+  @extend %select-none;
+  @include flexbox();
+  .compensa {
+    height: $heigthMenuItem;
+  }
+  .header {
+    position: fixed;
+    @include flex-direction();
+    top: 0;
+    left: 0;
+    max-height: 100px;
+    width: 100%;
+    z-index: 100;
+    // display: block;
+    // @extend %box-sizing;
+    height: 46px;
+    background-color: #ffffff;
+    @include box-shadow(0px -5px 15px 0 #000000);
+    .nav {
+      position: relative;
+      margin-left: auto;
+      margin-top: 6px;
+      padding: 2px 5px 2px 5px;
+      height: 35px;
+      background-color: white;
+      border: 1px solid transparent;
+      width: 135px;
+      @include flex-direction(column);
+      .nav-list-inline {
+        @include flex-direction();
+        @include justify-content(space-between);
+        @include flex_centralized();
+        text-transform: uppercase;
+        cursor: pointer;
+        opacity: 0.6;
+        &:hover {
+          opacity: 1;
+        }
+        &.active {
+          opacity: 1;
+        }
+        span {
+          padding: 2px;
+        }
+      }
+      .nav-list-itens {
+        font-size: 13px;
+      }
+      &.active {
+        border: 1px solid #ccc;
+        height: 95px;
+      }
+      ul {
+        margin-bottom: 5px;
+        li {
+          margin-top: 10px;
+          margin-left: 8px;
+          margin-right: 8px;
+          padding: 0;
+          max-height: 46px;
+          cursor: pointer;
+          opacity: 0.6;
+          &:hover {
+            opacity: 1;
+          }
+          img {
+            width: 25px;
+            height: 25px;
+            margin-left: $marginDefault;
+            margin-right: $marginDefault;
+          }
+        }
+      }
+    }
+    .log-out {
+      margin-right: 15px;
+      margin-left: 5px;
+      margin-top: 10px;
+      cursor: pointer;
+      opacity: 0.6;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    .btn-menu {
+      position: absolute;
+      top: 15px;
+      left: 13px;
+      z-index: 101;
+      cursor: pointer;
+      img {
+        height: 15px;
+        width: 19px;
+      }
+    }
+
+    .image-logo {
+      position: relative;
+      cursor: pointer;
+
+      &::before {
+        content: ' ';
+        position: absolute;
+        top: 0px;
+        left: 68px;
+        width: 36px;
+        height: 42px;
+        background-repeat: no-repeat;
+        background-position-x: -30px;
+        background-position-y: -17px;
+        background-size: 94px;
+
+        background-image: url(../../images/partner_one.png);
+      }
+      &::after {
+        content: ' ';
+        position: absolute;
+        top: 0px;
+        left: 103px;
+        width: 200px;
+        height: 38px;
+        background-repeat: no-repeat;
+        background-position-x: -8px;
+        background-position-y: -95px;
+        background-size: 159px;
+
+        background-image: url(../../images/partner_one.png);
+      }
+    }
+  }
+}
+
+.arrow {
+  transition: transform ease-in-out 0.3s;
+  &.active {
+    transform: rotate(180deg);
+    // margin-bottom: 5px;
+  }
+}

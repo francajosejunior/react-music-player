@@ -1,0 +1,9 @@
+@import './../../styles/scss/main';
+
+.horizonLine {
+  height: 2px;
+  background: rgb(237, 245, 248);
+  @include opacity(0.8);
+  margin-top: 4px;
+  width: 100%;
+}

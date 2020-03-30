@@ -1,0 +1,21 @@
+.app-error-handler {
+  margin: 15px;
+
+  h2 {
+    color: rgb(197, 108, 108);
+  }
+
+  p,
+  pre {
+    padding: 15px;
+    border-radius: 4px;
+  }
+
+  p {
+    background-color: rgb(255, 238, 196);
+  }
+
+  pre {
+    background-color: rgb(236, 236, 236);
+  }
+}

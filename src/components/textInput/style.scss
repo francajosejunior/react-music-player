@@ -1,0 +1,23 @@
+@import './../../styles/scss/main';
+
+.input-text {
+  &.error {
+    border: 1px solid red !important;
+    border-radius: 4px;
+    outline: lightness($color: red);
+  }
+  input {
+    @include input-default();
+  }
+  .input-icon {
+    position: absolute;
+    top: 4px;
+    right: 2px;
+    color: $colorInputBorder;
+    @include opacity(0.4);
+  }
+  &.label-line {
+    @include flex-direction();
+    @include flex_centralized();
+  }
+}

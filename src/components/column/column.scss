@@ -1,0 +1,10 @@
+@import './../../styles/scss/main';
+
+.default-column {
+  &.column {
+    @extend %col-form;
+  }
+  @media (max-width: 640px) {
+    width: 100% !important;
+  }
+}

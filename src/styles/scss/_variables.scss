@@ -1,0 +1,133 @@
+//magin
+$marginDefault: 8px;
+$n-marginDefault: -8px;
+
+//Paleta de Cores
+$colorBaseOne: #424242; // #1c81bc; //azul => hover e labels
+$colorBaseTwo: #7a7878; // #fdb913; //amarelo
+$colorBaseTwo-med: #e4e0e0; // #fffbf1; //amarelo
+$cor-texto: #464646;
+$colorInputBorder: #cccccc;
+$valor-positivo: #7ed321;
+$valor-negativo: #ff6961;
+$bg-tabela: #e1e1e1; // #f9f9f9;
+
+//crefisa
+$crefisa1: #1c4a70; //
+$crefisa2: #23b9e2; //
+$crefisa3: #ececec; //
+
+// menu
+$principal: #424242;
+$principalHover: #353535;
+$menu: #2b73ad; // #026096;
+$submenu: #2a89e3; // #0268a3;
+
+$dourado: #fdb913;
+$branco: #ffffff;
+
+//SIDE BAR
+$sidebarWidth: 256px;
+$sidebarMiniWidth: 46px;
+$heigthMenuItem: 42px;
+$fontSizeMenu: 12.5px;
+$timeTransitionMenu: 0.2s;
+$sidebarText: #9f9f9f;
+//SIDE BAR
+
+// criacao [ LOCAIS ]
+$fonts_location: '../fonts/';
+
+//projeto
+$images_location: '/crefisa.corban.html/dist/assets/images';
+
+//localhot
+//$images_location: 'http://localhost/crefisa/crefisa.corban.html/dist/assets/images';
+
+//Stagin
+//$images_location: '/partner/dist/assets/images';
+
+// criacao [ PONTOS DE QUEBRA ]
+// min
+$breakpoints: (
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px,
+  'xxl': 1500px
+) !default;
+//max
+$breakpointsMax: (
+  'sm': 575px,
+  'md': 767px,
+  'lg': 991px,
+  'xl': 1199px
+) !default;
+
+// criacao [ VARIAVEIS ]
+// [ VARIAVEIS > TAMANHO ]
+$browser-context: 16; // utilizada nas funcoes ( em, rem )
+$gutter: 15px;
+$columns: 12;
+
+// [ VARIAVIES > ANIMACAO ]
+$timing: 0.15s;
+
+$ease: ease;
+$ease-out: cubic-bezier(0.91, 0.12, 0.86, 0.29);
+$fast-in: cubic-bezier(0, 0.96, 0, 0.89);
+
+// criacao [ VARIAVEIS > CORES ]
+$white: #ffffff;
+$gray-100: #f9f7f7;
+$gray-200: #f1f1f1;
+$gray-300: #e2e1e2;
+$gray-500: #737272;
+$gray-900: #3c3c3c;
+$black: #000000;
+
+$blue: #009ad9;
+
+$orange: #ec9350;
+$lime-green: #b5c62c;
+$red: #e54a50;
+
+$colorGray: #e6e6e6;
+
+// social media colors
+$linkedin-color: #8d6cab;
+$facebook-color: #1d3469;
+$google-plus-color: #ff5d5d;
+
+// create [ COLORS ARRAY ]
+$colors: (
+  'white' $white,
+  'gray-100' $gray-100,
+  'gray-200' $gray-200,
+  'gray-300' $gray-300,
+  'gray' $gray-500,
+  'black' $black,
+  'blue' $blue,
+  'dark-blue' darken($blue, 10%),
+  'orange' $orange,
+  'lime-green' $lime-green,
+  'red' $red
+);
+
+// cria o array de fonts separados por espaco
+// ex: font_name font_name font_name
+$create-fonts: true;
+$fonts: 'gotham', 'gotham-light-regular', 'gotham-bold';
+
+// create [ WEBFONTS ]
+$gotham: 'gotham';
+$gotham-light: 'gotham-light-regular';
+$gotham-bold: 'gotham-bold';
+
+$roboto: 'Roboto', sans-serif;
+
+$col-form-size: 5.912px;
+
+$icone-cinza: #999999;
+$icone-vermelho: #e74c3c;
+$input-tabela: #ffffed;

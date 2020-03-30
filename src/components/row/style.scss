@@ -1,0 +1,25 @@
+@import './../../styles/scss/flexbox';
+
+.row {
+  @include flex-direction();
+  width: 100%;
+  margin: 0;
+  margin-top: 4x;
+  margin-bottom: 4px;
+  @media (max-width: 640px) {
+    @include flex-direction(column);
+    width: 100%;
+  }
+  &.oposite-sides {
+    @include justify-content(space-between);
+  }
+  &.align-to-end {
+    @include justify-content(flex-end);
+  }
+  &.vertical-align {
+    @include align-items(center);
+  }
+  &.no-margin {
+    margin: 0px;
+  }
+}

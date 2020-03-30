@@ -1,0 +1,36 @@
+@import './../../styles/scss/flexbox';
+
+.tab-head {
+  @include flex-direction();
+  @include align-items(center);
+  @include justify-content(flex-start);
+  background-color: #efefef;
+  height: 35px;
+  width: 100%;
+  font-size: 14px;
+  margin-bottom: 5px;
+  h1 {
+    margin-left: 15px;
+  }
+  span {
+    margin-left: 15px;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  .tabs {
+    padding-top: 3px;
+    li {
+      display: inline;
+      margin-left: 15px;
+      text-transform: uppercase;
+      cursor: pointer;
+      opacity: 0.9;
+      &:hover {
+        opacity: 1;
+      }
+      &.active {
+        font-weight: bold;
+      }
+    }
+  }
+}

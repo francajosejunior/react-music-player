@@ -1,0 +1,109 @@
+@import '../../styles/scss/main';
+
+$heightTile: 110px;
+$widthTileLarge: 250px;
+$widthTileMedium: 150px;
+$fColor: #fff;
+.tile {
+  user-select: none;
+  margin: $marginDefault;
+  color: $fColor;
+  border-width: 1px;
+  border-style: solid;
+  @include opacity(0.92);
+  position: relative;
+  cursor: pointer;
+  .icon {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+  }
+  .label {
+    color: $fColor;
+    font-size: 16px;
+    overflow: hidden;
+    padding: 5px 0 9px 9px;
+    min-height: 24px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 0px;
+    cursor: pointer;
+    &.unclickable {
+      cursor: default;
+    }
+  }
+  .value {
+    margin: auto auto 9px 9px;
+    font-size: 46px;
+  }
+  &:hover {
+    outline: rgb(153, 153, 153) solid 3px;
+  }
+  &:active {
+    outline: 0;
+  }
+
+  &.large {
+    height: $heightTile;
+    min-width: $widthTileLarge;
+    max-width: $widthTileLarge;
+    min-height: $heightTile;
+    max-height: $heightTile;
+    .label {
+      min-width: $widthTileLarge;
+      max-width: $widthTileLarge;
+    }
+  }
+  &.medium {
+    height: $heightTile;
+    min-width: $widthTileMedium;
+    max-width: $widthTileMedium;
+    min-height: $heightTile;
+    max-height: $heightTile;
+    .label {
+      min-width: $widthTileMedium;
+      max-width: $widthTileMedium;
+    }
+  }
+
+  &.animate {
+    animation: tiles-animation normal 1s;
+    -webkit-animation: tiles-animation normal 1s;
+  }
+  &.unclickable {
+    cursor: default;
+  }
+}
+
+@-moz-keyframes tiles-animation {
+  from {
+    @include opacity(0.3);
+    @include translate(5px, 0px);
+  }
+  to {
+    @include opacity(0.9);
+    @include translate(0, 0);
+  }
+}
+
+@-webkit-keyframes tiles-animation {
+  from {
+    @include opacity(0.3);
+    @include translate(5px, 0px);
+  }
+  to {
+    @include opacity(0.9);
+    @include translate(0, 0);
+  }
+}
+
+@keyframes tiles-animation {
+  from {
+    opacity: 0.3;
+    transform: translate(5px, 0px);
+  }
+  to {
+    opacity: 0.9;
+    transform: translate(0, 0);
+  }
+}

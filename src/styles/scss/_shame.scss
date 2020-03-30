@@ -1,0 +1,25 @@
+%ajuste-icone-exportar-painel {
+  > div.row:not(:last-child) {
+    padding-right: 35px;
+  }
+}
+
+.workflow-status-divisao {
+  width: 100%;
+  display: block;
+  .direita {
+    float: left;
+    width: 240px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+  .esquerda {
+    float: left;
+    width: calc(100% - 260px);
+    min-width: 240px;
+  }
+  .observacao {
+    height: 32px;
+    min-height: 32px !important;
+  }
+}

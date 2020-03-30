@@ -1,0 +1,46 @@
+@import './../../styles/scss/main';
+
+.button-login {
+  .input-box {
+    width: 100%;
+    height: 40px;
+    margin-top: 30px;
+    position: relative;
+    padding: 0;
+    border-radius: 4px;
+    background-color: #888888;
+    border: 1px solid #707070;
+    color: white;
+    cursor: pointer;
+    @include opacity(0.8);
+    &:hover {
+      @include opacity(1);
+    }
+    &.disabled {
+      cursor: initial;
+      @include opacity(0.4);
+      &:hover {
+        @include opacity(0.4);
+      }
+    }
+
+    @media (max-width: 1380px) {
+      height: 30px;
+    }
+    .content {
+      width: 100%;
+      @include flex-direction();
+      @include justify-content(center);
+      @include align-items(center);
+      .login-buttom-text {
+        width: 100%;
+      }
+      .login-buttom-img {
+        position: absolute;
+        margin-left: 41%;
+        margin-top: 2px;
+        width: 10%;
+      }
+    }
+  }
+}

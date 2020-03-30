@@ -1,0 +1,34 @@
+@import './../../styles/scss/mixins';
+@import './../../styles/scss/variables';
+@import './../../styles/scss/extends';
+
+.add-on {
+  @include flex-direction();
+  @include justify-content(center);
+  @include align-items(center);
+  height: 35px;
+  width: 100%;
+  @extend %bg-fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  input[type='text'] {
+    @include input(30px);
+    width: 100%;
+  }
+  span {
+    font-size: small;
+    color: #737272;
+    padding: 10px;
+  }
+  input,
+  span {
+    padding-left: 5px;
+  }
+}
+.input-range-date {
+  &.label-line {
+    @include flex-direction();
+    @include justify-content(center);
+    @include align-items(center);
+  }
+}

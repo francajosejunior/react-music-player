@@ -1,0 +1,13 @@
+@import './../../styles/scss/flexbox';
+
+.combo-box {
+  &.label-line {
+    @include flex-direction();
+    @include justify-content(center);
+    @include align-items(center);
+  }
+  &.vertical-margin {
+    margin-top: 7.5px;
+    margin-bottom: 7.5px;
+  }
+}

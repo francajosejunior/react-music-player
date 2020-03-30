@@ -1,0 +1,45 @@
+@import '../../styles/scss/main';
+button.btn {
+  height: 36px;
+  min-width: 100px;
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: $marginDefault;
+  margin-bottom: $marginDefault;
+  outline-width: 1px;
+  border: none;
+
+  &:hover {
+    border: none;
+    outline-width: 2px;
+  }
+  &:active {
+    border: none;
+    outline-width: 0px;
+  }
+
+  &.btn-green {
+    background-color: #29a942;
+    color: #ffffff;
+    outline-style: solid;
+    outline-color: #1c7a2f;
+    &:disabled {
+      opacity: 0.4;
+      outline-width: 0px;
+      cursor: default;
+    }
+  }
+
+  &.btn-red {
+    background-color: #cb1818;
+    color: #ffffff;
+    outline-style: solid;
+    outline-color: #8a0f0f;
+    &:disabled {
+      opacity: 0.4;
+      outline-width: 0px;
+      cursor: default;
+    }
+  }
+}

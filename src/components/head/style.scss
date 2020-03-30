@@ -1,0 +1,20 @@
+@import './../../styles/scss/flexbox';
+
+.head {
+  @include flex-direction();
+  @include align-items(center);
+  @include justify-content(flex-start);
+  background-color: #efefef;
+  height: 35px;
+  width: 100%;
+  font-size: 14px;
+  h1 {
+    margin-left: 15px;
+    padding-top: 3px;
+  }
+  span {
+    margin-left: 15px;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+}

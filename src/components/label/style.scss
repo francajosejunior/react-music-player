@@ -1,0 +1,33 @@
+@import './../../styles/scss/variables';
+
+@mixin label_style(
+  $font-site: 0.9rem,
+  $display: block,
+  $margin: 5px 0,
+  $width: 100%,
+  $text: normal
+) {
+  font-size: $font-site;
+  color: $colorBaseTwo;
+  margin: $margin;
+  text-transform: $text;
+  width: $width;
+  @if $display {
+    display: $display;
+  }
+}
+
+.label {
+  @include label_style(12px);
+}
+
+.inline-label {
+  margin-right: 2px;
+  @include label_style(0.9rem, 'block', 6px 10px 5px 0px, 100px, capitalize);
+  &.auto-width {
+    @media (max-width: 980px) {
+      width: 100px;
+    }
+    width: auto;
+  }
+}

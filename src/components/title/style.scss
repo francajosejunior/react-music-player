@@ -1,0 +1,31 @@
+@import './../../styles/scss/main';
+
+.title {
+  padding: 15px 0 15px 0;
+  color: $colorBaseOne;
+  font-size: 1.2rem;
+  border-bottom: 1px solid $colorBaseOne;
+  margin-bottom: 2px;
+  @include user-select(none);
+  font-weight: normal;
+  text-transform: capitalize;
+  position: relative;
+  .bottons {
+    position: absolute;
+    top: 13px;
+    right: 5px;
+    img {
+      cursor: pointer;
+    }
+  }
+
+  &.medium {
+    padding: 15px 0 10px 0;
+    font-size: 1.2rem;
+  }
+
+  &.small {
+    padding: 15px 0 10px 0;
+    font-size: 1rem;
+  }
+}

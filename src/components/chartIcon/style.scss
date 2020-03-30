@@ -1,0 +1,72 @@
+.chart-icon {
+  position: relative;
+  div {
+    position: absolute;
+    background-color: #fff;
+    opacity: 0.1;
+  }
+  div:nth-child(1) {
+    width: 20px;
+    height: 60px;
+    bottom: 0px;
+    right: 0px;
+    // animation: column1-animation normal 0.5s;
+  }
+  div:nth-child(2) {
+    width: 20px;
+    height: 80px;
+    bottom: 0px;
+    right: 22px;
+    // animation: column2-animation normal 0.5s;
+  }
+  div:nth-child(3) {
+    width: 20px;
+    height: 40px;
+    bottom: 0px;
+    right: 44px;
+    // animation: column3-animation normal 0.5s;
+  }
+  div:nth-child(4) {
+    width: 20px;
+    height: 10px;
+    bottom: 0px;
+    right: 66px;
+    // animation: column4-animation normal 0.5s;
+  }
+}
+
+@keyframes column1-animation {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 60px;
+  }
+}
+
+@keyframes column2-animation {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 80px;
+  }
+}
+
+@keyframes column3-animation {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 40px;
+  }
+}
+
+@keyframes column4-animation {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 10px;
+  }
+}

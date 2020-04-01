@@ -11,7 +11,8 @@ const playerReducerPersistConfig = {
 
 const rootReducer = combineReducers({
   toastr: toastrReducer,
-  player: persistReducer(playerReducerPersistConfig, playerReducer)
+  player: playerReducer,
+  fakePersist: persistReducer(playerReducerPersistConfig, (s = 0) => s)
 })
 
 export default rootReducer // persistReducer(rootPersistConfig, rootReducer);

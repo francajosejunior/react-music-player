@@ -1,17 +1,12 @@
 import React from 'react'
-import { HashRouter, Switch, Route } from 'react-router-dom'
-import PrivateRoutes from './PrivateRoutes'
-import Home from './features/home'
-import FormalizationMat from './features/formalizationMat'
-import FormalizationMatGrid from './features/formalizationMatGrid'
-import TicketMat from './features/ticketMat'
-import Whatsapp from './features/whatsapp'
+import { HashRouter, Route, Switch } from 'react-router-dom'
+import Player from './pages/player'
 
-function Routes(params) {
+function Routes() {
   return (
     <HashRouter>
       <Switch>
-        <Route path="/" exact component={Home} />
+        <Route path="/" exact component={Player} />
       </Switch>
     </HashRouter>
   )

@@ -3,8 +3,8 @@ import './styles.scss'
 
 const Button = ({ className = '', children, ...props }) => {
   return (
-    <button className={`btn ${className}`} {...props}>
-      {children}
+    <button className={`btn-wrapper ${className}`} {...props}>
+      <span className="btn-content">{children}</span>
     </button>
   )
 }

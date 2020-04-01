@@ -1,9 +1,9 @@
 import axios from 'axios'
 import { toastr } from 'react-redux-toastr'
 import configuration from '../configuration/index'
-import { notify } from '../features/notification/notificationSlice'
+import { notify } from '../pages/notification/notificationSlice'
 import { notificationTypeEnum } from './notificationServices'
-import { logout } from '../features/login/loginSlice'
+import { logout } from '../pages/login/loginSlice'
 
 let lastStatus = null
 const api = axios.create({

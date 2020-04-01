@@ -2,7 +2,7 @@ import React from 'react'
 import SideBar from '../sideBar'
 import Nav from '../nav'
 import './style.scss'
-import Menu from '../../features/menu'
+import Menu from '../../pages/menu'
 
 function Container(props) {
   const { component, ...rest } = props

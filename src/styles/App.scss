@@ -3,6 +3,10 @@
 @import "./lib/reset.scss";
 @import "./lib/material-icon.scss";
 @import "./scss/mixins";
+@import "./theme/default";
+
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 
 html,
 body,

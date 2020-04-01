@@ -1,7 +1,7 @@
 import React, { memo, useMemo } from 'react'
 import { useSelector } from 'react-redux'
 import _ from 'lodash'
-import { loginRolesSelector } from '../../features/login/loginSlice'
+import { loginRolesSelector } from '../../pages/login/loginSlice'
 
 const Role = ({ roles = [], render }) => {
   const loginRoles = useSelector(loginRolesSelector)

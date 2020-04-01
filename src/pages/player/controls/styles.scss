@@ -1,0 +1,24 @@
+@import "~styles";
+
+.player-controls {
+    @include flexbox();
+    @include flex-dir(row);
+
+    .main-controls {
+        @include flexbox();
+        @include flex(1);
+        @include flex-dir(row);
+        @include justify-content(space-between);
+    }
+
+    .aux-controls {
+        @include flexbox();
+        @include flex-dir(row);
+        @include justify-content(space-between);
+        @include transform(scale(0.7) translateY(10px));
+    }
+
+    .file-upload {
+        display: none;
+    }
+}

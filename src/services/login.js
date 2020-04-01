@@ -1,5 +1,5 @@
 import api from './api'
-import { sleep } from '../util/generalUtilities'
+import { sleep } from '../util/'
 
 export const fetchLogin = async login => {
   const mapedLogin = {

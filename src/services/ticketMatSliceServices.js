@@ -1,5 +1,5 @@
 import api from './api'
-import { whatsAppTelephoneFormat } from '../util/generalUtilities'
+import { whatsAppTelephoneFormat } from '../util/'
 
 const mapResult = result => {
   const { canal, canalTelefone } = result

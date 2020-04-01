@@ -23,7 +23,7 @@ const optimization = {
 
 const devServer = {
   inline: true,
-  port: 8000
+  port: 6969
 }
 
 module.exports = {

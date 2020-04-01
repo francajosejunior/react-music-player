@@ -2,11 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { toastr } from 'react-redux-toastr'
 import _ from 'lodash'
 import Label from '../label'
-import {
-  safeProp,
-  returnFileSize,
-  getFileNameWithExt
-} from '../../util/generalUtilities'
+import { safeProp, returnFileSize, getFileNameWithExt } from '../../util/'
 import './style.scss'
 
 function LimitSizeException(value) {

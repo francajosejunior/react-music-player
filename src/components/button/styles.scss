@@ -1,14 +1,31 @@
-@import '../../styles/scss/main';
-button.btn {
-  height: 36px;
-  min-width: 100px;
-  max-width: 180px;
+@import "../../styles/scss/main";
+button.btn-wrapper {
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-right: $marginDefault;
-  margin-bottom: $marginDefault;
   outline-width: 1px;
+  outline-color: rgb(58, 58, 58);
   border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: $marginDefault;
+  @include rounded(50%);
+  box-shadow: 2px 2px 3px #ccc;
+
+  span.btn-content {
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    height: 60px;
+    width: 60px;
+  }
+
+  background-color: var(--primary-bg);
+  color: var(--primary-fg);
+  i,
+  span {
+    color: var(--primary-fg);
+    font-size: 1.3em;
+  }
 
   &:hover {
     border: none;
@@ -17,29 +34,7 @@ button.btn {
   &:active {
     border: none;
     outline-width: 0px;
-  }
-
-  &.btn-green {
-    background-color: #29a942;
-    color: #ffffff;
-    outline-style: solid;
-    outline-color: #1c7a2f;
-    &:disabled {
-      opacity: 0.4;
-      outline-width: 0px;
-      cursor: default;
-    }
-  }
-
-  &.btn-red {
-    background-color: #cb1818;
-    color: #ffffff;
-    outline-style: solid;
-    outline-color: #8a0f0f;
-    &:disabled {
-      opacity: 0.4;
-      outline-width: 0px;
-      cursor: default;
-    }
+    @include transform(scale(0.95));
+    box-shadow: none;
   }
 }

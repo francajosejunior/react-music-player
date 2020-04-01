@@ -5,7 +5,7 @@ import { PersistGate } from 'redux-persist/integration/react'
 import './index.css'
 import App from './App'
 import store, { persistor } from './store'
-import ErrorHandler from './features/errorHandler'
+import ErrorHandler from './pages/errorHandler'
 
 ReactDOM.render(
   <ErrorHandler>

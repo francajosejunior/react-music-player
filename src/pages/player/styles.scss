@@ -1,0 +1,7 @@
+@import "~styles";
+
+.player-container {
+    @include flexbox();
+    @include flex(1);
+    @include flex-dir(column);
+}

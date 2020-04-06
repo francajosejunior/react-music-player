@@ -3,7 +3,13 @@ import { useDispatch } from 'react-redux'
 import Button from '../../../components/button'
 import Icon from '../../../components/icon'
 import { addFileThunk } from '../../../store/player/player-thunks'
-import { clearFiles } from '../../../store/player/player-slice'
+import {
+  clearFiles,
+  onPlay,
+  togglePause,
+  onStop,
+  setTime
+} from '../../../store/player/player-slice'
 import './styles.scss'
 
 const Controls = () => {
@@ -13,6 +19,19 @@ const Controls = () => {
 
   return (
     <div className="player-controls">
+      <div className="main-controls">
+        <Button>
+          <Icon icon="fa-step-backward" />
+        </Button>
+        <Button onClick={() => dispatch(onPlay())}>
+          <Icon icon="fa-play" />
+          {/* pause */}
+        </Button>
+        <Button>
+          <Icon icon="fa-step-forward" />
+        </Button>
+      </div>
+
       <div className="aux-controls">
         <Button
           onClick={() => {
@@ -37,20 +56,7 @@ const Controls = () => {
         >
           <Icon icon="fa-file-o" />
         </Button>
-      </div>
-      <div className="main-controls">
-        <Button>
-          <Icon icon="fa-step-backward" />
-        </Button>
-        <Button>
-          <Icon icon="fa-play" />
-          {/* pause */}
-        </Button>
-        <Button>
-          <Icon icon="fa-step-forward" />
-        </Button>
-      </div>
-      <div className="aux-controls">
+
         <Button>A - B</Button>
         <Button>
           <Icon icon="fa-backward" />

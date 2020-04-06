@@ -1,0 +1,59 @@
+@import "~styles";
+
+.progress-bar-wrapper {
+    width: 100%;
+    height: 10px;
+    @include flexbox();
+    @include flex-row();
+
+    .progress-bar-container {
+        cursor: pointer;
+        margin: 0 10px;
+        @include flexbox();
+        @include flex(1);
+        position: relative;
+
+        input[type="range"] {
+            cursor: pointer;
+            @include opacity(0);
+            z-index: 10;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            // appearance: none;
+            // -webkit-appearance: none;
+            // -ms-progress-appearance: none;
+            // -moz-appearance: none;
+
+            // &::-webkit-slider-thumb {
+            //     appearance: none;
+            //     -webkit-appearance: none;
+            //     -ms-progress-appearance: none;
+            //     -moz-appearance: none;
+            // }
+        }
+
+        .progress-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+            @include rounded(10px);
+            @include flexbox();
+            width: 100%;
+            height: 100%;
+
+            background-color: rgb(77, 75, 75);
+            .progress-bar-progress {
+                cursor: pointer;
+                background-color: #067bb1;
+                @include rounded(10px);
+                top: 0;
+                left: 0;
+                height: 100%;
+            }
+        }
+    }
+}

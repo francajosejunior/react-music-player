@@ -16,6 +16,13 @@ export const isPlayingSelector = state => state.player.playing
 export const isPausedSelector = state => state.player.pause
 export const timeSelector = state => state.player.time
 export const durationSelector = state => state.player.duration
+export const abSelector = state => {
+  return {
+    a: state.player.a,
+    b: state.player.b
+  }
+}
+
 export const jumpSelector = createSelector(
   durationSelector,
   state => state.player.jump,

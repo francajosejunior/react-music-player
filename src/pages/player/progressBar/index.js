@@ -8,7 +8,7 @@ import { jump } from '../../../store/player/player-slice'
 const ProgressBar = () => {
   const progress = useSelector(progressSelector)
   const dispatch = useDispatch()
-  console.log(`${progress}%`)
+
   return (
     <div className="progress-bar-wrapper">
       <div className="progress-bar-container">

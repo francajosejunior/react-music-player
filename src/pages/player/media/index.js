@@ -5,7 +5,8 @@ import {
   currentMediaSelector,
   isPlayingSelector,
   isPausedSelector,
-  jumpSelector
+  jumpSelector,
+  abSelector
 } from '../../../store/player/player-selectors'
 import { base64MimeType } from '../../../util'
 import './styles.scss'
@@ -25,6 +26,7 @@ const Media = () => {
   const isPlaying = useSelector(isPlayingSelector)
   const isPaused = useSelector(isPausedSelector)
   const jump = useSelector(jumpSelector)
+  const { a, b } = useSelector(abSelector)
 
   const mediaRef = useRef(null)
   const mimeTYpe = base64MimeType(media)
@@ -49,6 +51,8 @@ const Media = () => {
       mediaRef.current.currentTime = jump
     }
   }, [jump])
+
+  // useEffect(() => {}, [a, b])
 
   if (!media) return null
   return (

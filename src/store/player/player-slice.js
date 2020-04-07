@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
+import _ from 'lodash'
 
 const initialState = {
   fetching: false,
@@ -8,7 +9,9 @@ const initialState = {
   pause: false,
   time: 0,
   duration: 0,
-  jump: null
+  jump: null,
+  a: null,
+  b: null
 }
 
 const playerSlice = createSlice({
@@ -54,6 +57,16 @@ const playerSlice = createSlice({
     },
     jump: (state, action) => {
       state.jump = action.payload
+    },
+    setAB: state => {
+      if (_.isNull(state.a)) {
+        state.a = state.time
+      } else if (_.isNull(state.b)) {
+        state.b = state.time
+      } else {
+        state.a = null
+        state.b = null
+      }
     }
   }
 })
@@ -71,7 +84,8 @@ export const {
   onStop,
   setTime,
   setDuration,
-  jump
+  jump,
+  setAB
 } = actions
 // Export the reducer, either as a default or named export
 export default reducer

@@ -8,7 +8,8 @@ import {
   onPlay,
   togglePause,
   onStop,
-  setTime
+  setTime,
+  setAB
 } from '../../../store/player/player-slice'
 import './styles.scss'
 
@@ -57,7 +58,13 @@ const Controls = () => {
           <Icon icon="fa-file-o" />
         </Button>
 
-        <Button>A - B</Button>
+        <Button
+          onClick={() => {
+            dispatch(setAB())
+          }}
+        >
+          A - B
+        </Button>
         <Button>
           <Icon icon="fa-backward" />
         </Button>

@@ -56,7 +56,7 @@
     "@aspnet/signalr": "^1.1.4",
     "@babel/polyfill": "^7.2.5",
     "@reduxjs/toolkit": "^1.2.3",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "create-react-class": "^15.6.3",
     "cross-env": "^7.0.0",
     "file-saver": "^2.0.1",
